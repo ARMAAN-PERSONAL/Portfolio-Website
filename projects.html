@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Assignment 01">
+    <meta name="author" content="Armaan Singh">
+    <title>Armaan Singh - Projects</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <!-- 
+    Name: Armaan Singh
+    File: projects.html
+    Date: 2024-07-02
+    Description: An html framework page with information about the projects created by the creator  Armaan Singh
+    -->
+    <!-- Header for name with Navbar to scroll between pages -->
+    <header>
+        <h1>Armaan Singh</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div id="project-container">
+            <div class="project active">
+                <h2>Portfolio Website</h2>
+                <p>A Portfolio website for a local car dealership displaying their Portfolio, and certain models thay
+                    sold from 4 main manufacturers.</p>
+                <p>Completed: June, 2023</p>
+                <p>Technologies: HTML, CSS, JavaScript, BootStrap</p>
+                <p><a href="https://github.com/ARMAAN-PERSONAL/Automania" target="_blank">Click
+                        to preview</a></p>
+                <div class="image-container">
+                    <img class="Images" src="brand1.png" alt="Screenshot of Project 1">
+                    <img class="Images" src="P1.png" alt="Screenshot of Project 1">
+                </div>
+            </div>
+
+            <div class="project">
+                <h2>To-do List Program</h2>
+                <p>This simple ToDo List App allows users to add, view, and manage tasks directly in the browser. It
+                    features a form to input new tasks, a dynamic list to display them, and a button to clear all tasks.
+                </p>
+                <p>Completed: August, 2023</p>
+                <p>Technologies: HTML, CSS, JavaScript</p>
+                <p><a href="https://armaan-personal.github.io/To-do-Program-Application/"
+                        target="_blank">Click to preview</a></p>
+                <div class="image-container">
+                    <img class="Images" src="TODO.png" alt="Screenshot of Project 2">
+                    <img class="Images" src="P2.png" alt="Screenshot of Project 2">
+                </div>
+            </div>
+
+            <div class="project">
+                <h2>Daily quote generator</h2>
+                <p>This is a simple application that helps individuals to get their daily dose of motivation, it contains a treasury of 
+                    powerful and empowering quotes available to the user on the click of a button.
+                </p>
+                <p>Completed: October, 2023</p>
+                <p>Technologies: HTML, CSS, JavaScript</p>
+                <p><a href="https://armaan-personal.github.io/Quote-Generator-Application/"
+                        target="_blank">Click to preview</a></p>
+                <div class="image-container">
+                    <img class="Images" src="quotes.png" alt="Screenshot of Project 3">
+                    <img class="Images" src="P3.png" alt="Screenshot of Project 3">
+                </div>
+            </div>
+
+            <div class="project">
+                <h2>Jokes generator</h2>
+                <p>This simple application frees the users from all their stress and sorrow, it helps one to rejoice their lives
+                    with its inventory of powerfull jokes available on the click of a button.
+                </p>
+                <p>Completed: October, 2023</p>
+                <p>Technologies: HTML, CSS, JavaScript</p>
+                <p><a href="https://armaan-personal.github.io/Joke-Generator-Application/"
+                        target="_blank">Click to preview</a></p>
+                <div class="image-container">
+                    <img class="Images" src="jokes.png" alt="Screenshot of Project 4">
+                    <img class="Images" src="P4.png" alt="Screenshot of Project 4">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="navigation">
+            <button id="prev-button" class="submitterButtons">Previous</button>
+            <button id="next-button" class="submitterButtons">Next</button>
+        </div>
+    </main>
+
+    <!--Footer for Copyright and label-->
+    <footer>
+        <p>&copy; 2024 Armaan Singh. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Select all project elements
+        const projectItems = document.getElementsByClassName('project');
+        let currentProjectIndex = 0; // Initialize index for current displayed project
+
+        // Function to show a specific project based on index
+        function showProject(index) {
+            // Hide all projects
+            for (let project of projectItems) {
+                project.classList.remove('active');
+            }
+            // Show the selected project
+            projectItems[index].classList.add('active');
+        }
+
+        // Initial display of the first project
+        showProject(currentProjectIndex);
+
+        // Previous button click event listener
+        document.getElementById('prev-button').addEventListener('click', () => {
+            if (currentProjectIndex > 0) {
+                currentProjectIndex--; // Move to the previous project
+            } else {
+                currentProjectIndex = projectItems.length - 1; // Wrap around to the last project
+            }
+            showProject(currentProjectIndex); // Show the updated project
+        });
+
+        // Next button click event listener
+        document.getElementById('next-button').addEventListener('click', () => {
+            if (currentProjectIndex < projectItems.length - 1) {
+                currentProjectIndex++; // Move to the next project
+            } else {
+                currentProjectIndex = 0; // Wrap around to the first project
+            }
+            showProject(currentProjectIndex); // Show the updated project
+        });
+    </script>
+
+</body>
+
+</html>

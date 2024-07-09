@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Assignment 01">
+    <meta name="author" content="Armaan Singh">
+    <title>Armaan Singh - Contact</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <!-- 
+    Name: Armaan Singh
+    File: contact.html
+    Date: 2024-07-02
+    Description: An html framework page with a form for user interaction.
+    -->
+    <!-- Header for name with Navbar to scroll between pages -->
+    <header>
+        <h1>Armaan Singh</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--Main section with form to receive Name, Email and a custom message as input-->
+    <main>
+        <section>
+            <h2>Contact Me</h2>
+            <form action="contact.html" method="post" enctype="text/plain">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required placeholder="Enter name"><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required placeholder="Enter email"><br>
+
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="4" cols="30" required placeholder="Leave your thoughts"></textarea><br>
+
+                <input class= "submitterButtons" type="submit" value="Submit">
+                <input class= "submitterButtons" type="reset" value="Reset">
+            </form>
+        </section>
+    </main>
+
+    <!--Footer for Copyright and label-->
+    <footer>
+        <p>&copy; 2024 Armaan Singh. All rights reserved.</p>
+    </footer>
+</body>
+</html>

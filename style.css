@@ -1,0 +1,323 @@
+/*
+Name: Armaan Singh
+File: style.css
+Date: 2024-07-02
+Description: A css stylesheet for index.html, contact.html, resume.html, and projects.html using classes, id's and tag selectors
+*/
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #e6e6e6;
+    background: url('bg6.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: background 0.5s ease-in-out;
+}
+
+header {
+    background: rgba(10, 10, 20, 0.9);
+    color: #ffffff;
+    padding: 1em 0;
+    text-align: center;
+    border-bottom: 3px solid #333333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    position: relative;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.2em;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.3);
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 0.05em;
+}
+
+h2 {
+    transition: color 0.3s, font-size 0.8s ease;
+    color: #e6e6e6;
+    margin-top: 0;
+    font-size: 1.5em;
+}
+
+h2:hover {
+    font-size: 1.6em;
+    color: #ffffff;
+}
+
+h3 {
+    font-size: 1.3em;
+    font-weight: 500;
+    color: #cccccc;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+}
+
+h4 {
+    font-size: 1.1em;
+    color: #b3b3b3;
+    margin: 0.8em 0 0.3em;
+}
+
+p, li {
+    color: #d3d3d3;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.8);
+    border-top: 2px solid #444444;
+    margin-top: 3em;
+}
+
+nav ul li {
+    margin: 0.5em 1em;
+}
+
+nav ul li a {
+    color: #e6e6e6;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5em 1em;
+    border-radius: 4px;
+    transition: transform 0.5s ease, color 0.3s, background 0.3s;
+}
+
+nav ul li a:hover {
+    color: #000000;
+    background: #e6e6e6;
+    transform: rotateY(360deg);
+}
+
+main {
+    padding: 2em;
+    max-width: 80%;
+    margin: 6em auto 2em;
+    background-color: rgba(20, 20, 30, 0.9);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    border: 2px solid #333333;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+section {
+    margin-bottom: 1em;
+    padding: 1em;
+    border-radius: 10px;
+    background: rgba(30, 30, 40, 0.7);
+    border: 2px solid #555555;
+    transition: transform 0.3s, box-shadow 0.3s, opacity 0.3s ease;
+}
+
+section:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 20px rgba(230, 230, 230, 0.5);
+    border-color: #999999;
+    opacity: 0.9;
+}
+
+form {
+    background-color: rgba(20, 20, 30, 0.9);
+    padding: 1.5em;
+    border-radius: 10px;
+    border: 2px solid #333333;
+    margin-bottom: 2em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.7em;
+    margin-bottom: 1.2em;
+    border: 1px solid #555555;
+    border-radius: 6px;
+    background-color: rgba(40, 40, 60, 0.8);
+    color: #e6e6e6;
+    transition: border-color 0.3s ease;
+}
+
+.form-input:focus {
+    border-color: #999999;
+    outline: none;
+}
+
+.submitterButtons {
+    background-color: #e6e6e6;
+    color: #1a1f36;
+    border: none;
+    padding: 0.7em 1.5em;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+}
+
+.submitterButtons:hover {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+.project p a{
+    color: #d3d3d3;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+    
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 0.5em 0;
+    }
+
+    main {
+        max-width: 90%;
+        margin: 6em auto 1.5em;
+    }
+
+    section {
+        padding: 0.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.6em;
+    }
+
+    nav ul li a {
+        padding: 0.5em;
+        font-size: 1em;
+    }
+
+    main {
+        padding: 1.2em;
+    }
+}
+
+.image-container {
+    text-align: center;
+    padding: 1.2em;
+}
+
+.Images {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 300px;
+    max-height: 300px;
+    min-width: none;
+    min-height: none;
+    height: auto;
+    width: 300px;
+    border: 3px solid #cccccc;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+.Images:hover {
+    transform: scale(1.05);
+    border-color: #333333;
+}
+
+section a {
+    color: #e6e6e6;
+    font-weight: 400;
+}
+
+#project-container {
+    display: flex;
+    overflow-x: hidden;
+    width: 100%;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+.project {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    padding: 20px;
+    box-sizing: border-box;
+    display: none;
+}
+
+.project.active {
+    display: block;
+}
+
+.text-dark-grey {
+    color: #cccccc;
+}
+
+.text-medium-grey {
+    color: #b3b3b3;
+}
+
+.text-light-grey {
+    color: #d3d3d3;
+}
+
+.text-white {
+    color: #ffffff;
+}
+
+button {
+    background-color: #444444;
+    color: #ffffff;
+    border: none;
+}
+
+.skill-bar {
+    background-color: #f3f3f3;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+    height: 2em;
+    transition: tranform 0.5s ease, border 0.5 ease;
+    width: 70vw;
+}
+
+.skill-bar:hover{
+    transform:scale(1.02);
+    border: 4px solid white
+}
+
+.skill-level {
+    background-color: #505050; 
+    height: 100%;
+    line-height: 20px;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.level-90 { width: 90%; }
+.level-85 { width: 85%; }
+.level-80 { width: 80%; }
+.level-75 { width: 75%; }
+.level-70 { width: 70%; }
+.level-95 { width: 95%; }
+.level-90 { width: 90%; }
+.level-85 { width: 85%; }
+
